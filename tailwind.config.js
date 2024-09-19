@@ -51,6 +51,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Necromancy theme colors
+        'dark-purple': '#4A0E4E',
+        'sickly-green': '#7FFF00',
+        'crimson': '#DC143C',
+        'bone-white': '#F9F6EE',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,6 +75,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      textShadow: {
+        'necro': '0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00',
       },
     },
   },
