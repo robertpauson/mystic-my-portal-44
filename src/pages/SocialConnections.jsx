@@ -1,45 +1,78 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
 
 const SocialConnections = () => {
-  const connections = [
-    { name: 'Morticia Addams', role: 'Goth Queen' },
-    { name: 'Dracula', role: 'Vampire Lord' },
-    { name: 'Merlin', role: 'Wizard Extraordinaire' },
-    { name: 'Elvira', role: 'Mistress of the Dark' },
-    { name: 'Gandalf', role: 'Grey Wizard' },
+  const people = [
+    { id: 1, name: 'Alice Johnson', image: 'https://placekitten.com/200/200' },
+    { id: 2, name: 'Bob Smith', image: 'https://placekitten.com/201/201' },
+    { id: 3, name: 'Carol Williams', image: 'https://placekitten.com/202/202' },
+    { id: 4, name: 'David Brown', image: 'https://placekitten.com/203/203' },
+    { id: 5, name: 'Eva Davis', image: 'https://placekitten.com/204/204' },
+    { id: 6, name: 'Frank Miller', image: 'https://placekitten.com/205/205' },
+    { id: 7, name: 'Grace Wilson', image: 'https://placekitten.com/206/206' },
+    { id: 8, name: 'Henry Taylor', image: 'https://placekitten.com/207/207' },
+    { id: 9, name: 'Ivy Anderson', image: 'https://placekitten.com/208/208' },
+    { id: 10, name: 'Jack Thomas', image: 'https://placekitten.com/209/209' },
+    { id: 11, name: 'Kate Martin', image: 'https://placekitten.com/210/210' },
+    { id: 12, name: 'Liam White', image: 'https://placekitten.com/211/211' },
+    { id: 13, name: 'Mia Harris', image: 'https://placekitten.com/212/212' },
+    { id: 14, name: 'Noah Clark', image: 'https://placekitten.com/213/213' },
+    { id: 15, name: 'Olivia Lewis', image: 'https://placekitten.com/214/214' },
+    { id: 16, name: 'Peter Hall', image: 'https://placekitten.com/215/215' },
+    { id: 17, name: 'Quinn Young', image: 'https://placekitten.com/216/216' },
+    { id: 18, name: 'Rachel King', image: 'https://placekitten.com/217/217' },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-bone-white">
-      <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-shadow-necro">Social Connections</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {connections.map((connection, index) => (
-            <div key={index} className="bg-gray-900/50 backdrop-blur-lg rounded-lg p-6 shadow-xl">
-              <h2 className="text-2xl font-semibold mb-2 text-sickly-green">{connection.name}</h2>
-              <p className="text-crimson">{connection.role}</p>
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12">People I've Met</h1>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {people.map((person) => (
+            <div key={person.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src={person.image} alt={person.name} className="w-full h-40 object-cover" />
+              <div className="p-4">
+                <h2 className="text-lg font-semibold text-gray-800">{person.name}</h2>
+              </div>
             </div>
           ))}
         </div>
-        <div className="mt-16 bg-gray-900/50 backdrop-blur-lg rounded-lg p-8 shadow-xl">
-          <h2 className="text-2xl font-semibold mb-4 text-crimson">Networking Events</h2>
-          <ul className="space-y-4 text-bone-white">
+        
+        <section className="mt-16 bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Networking Events</h2>
+          <ul className="space-y-4">
             <li>
-              <h3 className="text-xl font-medium text-sickly-green">Annual Necromancers' Ball</h3>
-              <p>A gathering of the most influential practitioners of the dark arts.</p>
+              <h3 className="text-xl font-semibold">Tech Meetup 2023</h3>
+              <p className="text-gray-600">Connected with fellow developers and discussed latest trends in web development.</p>
             </li>
             <li>
-              <h3 className="text-xl font-medium text-sickly-green">Witches' Brew Coffee Meetup</h3>
-              <p>Monthly casual meetings to discuss the latest in magical theory and practice.</p>
+              <h3 className="text-xl font-semibold">Design Conference</h3>
+              <p className="text-gray-600">Attended workshops on UI/UX design and met creative professionals from various industries.</p>
             </li>
             <li>
-              <h3 className="text-xl font-medium text-sickly-green">Undead Poetry Slam</h3>
-              <p>A unique event where the living and the dead share their artistic expressions.</p>
+              <h3 className="text-xl font-semibold">Startup Pitch Night</h3>
+              <p className="text-gray-600">Networked with entrepreneurs and investors, gaining insights into the startup ecosystem.</p>
             </li>
           </ul>
-        </div>
+        </section>
+        
+        <section className="mt-16 bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Community Involvement</h2>
+          <ul className="space-y-4">
+            <li>
+              <h3 className="text-xl font-semibold">Code for Good Hackathon</h3>
+              <p className="text-gray-600">Participated in a 48-hour coding marathon to develop solutions for local non-profits.</p>
+            </li>
+            <li>
+              <h3 className="text-xl font-semibold">Mentorship Program</h3>
+              <p className="text-gray-600">Volunteered as a mentor for aspiring developers, guiding them through their coding journey.</p>
+            </li>
+            <li>
+              <h3 className="text-xl font-semibold">Tech Talks at Local Schools</h3>
+              <p className="text-gray-600">Gave presentations to high school students about careers in technology and the importance of STEM education.</p>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   );
