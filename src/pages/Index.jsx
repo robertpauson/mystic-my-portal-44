@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sparkles, Users, Briefcase, Eye } from 'lucide-react';
 
 const Index = () => {
@@ -45,16 +46,19 @@ const Index = () => {
             icon={<Users className="h-12 w-12 text-blue-400" />}
             title="Social Connections"
             description="Building meaningful relationships and fostering a strong community."
+            link="/social-connections"
           />
           <FeatureCard
             icon={<Briefcase className="h-12 w-12 text-green-400" />}
             title="Career Journey"
             description="Navigating the professional world with passion and determination."
+            link="/career"
           />
           <FeatureCard
             icon={<Eye className="h-12 w-12 text-red-400" />}
             title="Unique Perspective"
             description="Seeing the world through a lens of curiosity and wonder."
+            link="/unique-perspective"
           />
         </div>
         
@@ -75,7 +79,7 @@ const Index = () => {
             <div
               key={i}
               className={`${
-                (Math.floor(i / 8) + i) % 2 === 0 ? 'bg-white' : 'bg-black'
+                (Math.floor(i / 8) + i) % 2 === 0 ? 'bg-white' : 'bg-purple-900'
               }`}
             ></div>
           ))}
@@ -85,15 +89,17 @@ const Index = () => {
   );
 };
 
-const FeatureCard = ({ icon, title, description }) => {
+const FeatureCard = ({ icon, title, description, link }) => {
   return (
-    <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-      <div className="flex items-center mb-4">
-        {icon}
-        <h2 className="text-2xl font-semibold text-white ml-4">{title}</h2>
+    <Link to={link || "#"} className="block">
+      <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+        <div className="flex items-center mb-4">
+          {icon}
+          <h2 className="text-2xl font-semibold text-white ml-4">{title}</h2>
+        </div>
+        <p className="text-gray-300">{description}</p>
       </div>
-      <p className="text-gray-300">{description}</p>
-    </div>
+    </Link>
   );
 };
 
