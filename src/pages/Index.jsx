@@ -6,7 +6,10 @@ const Index = () => {
     <div className="min-h-screen bg-black relative overflow-hidden">
       {/* Void portal hero section */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-blue-900 to-black animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-3/4 h-3/4 bg-gradient-to-r from-gray-900 via-white to-gray-900 rounded-full opacity-20 animate-pulse"></div>
+        </div>
         <div className="absolute inset-0 opacity-50">
           {[...Array(100)].map((_, i) => (
             <div
@@ -24,7 +27,7 @@ const Index = () => {
         </div>
         <div className="relative z-10 text-center">
           <h1 className="text-6xl font-bold text-white mb-4">Welcome to My Realm</h1>
-          <p className="text-2xl text-blue-200">Discover the Magic Within</p>
+          <p className="text-2xl text-gray-300">Discover the Magic Within</p>
         </div>
       </div>
 
@@ -62,6 +65,20 @@ const Index = () => {
           <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
             Explore More
           </button>
+        </div>
+      </div>
+
+      {/* Chessboard background */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="grid grid-cols-8 h-full">
+          {[...Array(64)].map((_, i) => (
+            <div
+              key={i}
+              className={`${
+                (Math.floor(i / 8) + i) % 2 === 0 ? 'bg-white' : 'bg-black'
+              }`}
+            ></div>
+          ))}
         </div>
       </div>
     </div>
