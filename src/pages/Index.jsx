@@ -5,7 +5,44 @@ import { Sparkles, Users, Briefcase, Eye } from 'lucide-react';
 const Index = () => {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Void portal hero section */}
+      {/* New hero section with elliptic gradient and necro border */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-radial from-purple-900 via-black to-gray-900"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-3/4 h-3/4 bg-gradient-radial from-white via-purple-300 to-black rounded-full opacity-30 animate-pulse"></div>
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-1/2 h-1/2 border-8 border-purple-500 rounded-full"></div>
+        </div>
+        {/* Necro-themed chessboard border */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="h-8 w-full flex">
+            {[...Array(16)].map((_, i) => (
+              <div key={i} className={`flex-1 h-full ${i % 2 === 0 ? 'bg-white' : 'bg-black'}`}></div>
+            ))}
+          </div>
+          <div className="h-8 w-full flex absolute bottom-0">
+            {[...Array(16)].map((_, i) => (
+              <div key={i} className={`flex-1 h-full ${i % 2 === 0 ? 'bg-purple-800' : 'bg-yellow-700'}`}></div>
+            ))}
+          </div>
+          <div className="w-8 h-full absolute left-0 flex flex-col">
+            {[...Array(16)].map((_, i) => (
+              <div key={i} className={`flex-1 w-full ${i % 2 === 0 ? 'bg-white' : 'bg-purple-800'}`}></div>
+            ))}
+          </div>
+          <div className="w-8 h-full absolute right-0 flex flex-col">
+            {[...Array(16)].map((_, i) => (
+              <div key={i} className={`flex-1 w-full ${i % 2 === 0 ? 'bg-black' : 'bg-yellow-700'}`}></div>
+            ))}
+          </div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-6xl font-bold text-white mb-4">Enter the Void</h1>
+          <p className="text-2xl text-purple-300">Where Magic and Mystery Collide</p>
+        </div>
+      </div>
+
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black"></div>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -32,7 +69,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-white mb-8 text-center">Explore My World</h2>
         
@@ -72,7 +108,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Chessboard background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="grid grid-cols-8 h-full">
           {[...Array(64)].map((_, i) => (
