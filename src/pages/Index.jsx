@@ -3,25 +3,34 @@ import { Sparkles, Users, Briefcase, Eye } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-blue-900 relative overflow-hidden">
-      {/* Chessboard background */}
-      <div className="absolute inset-0 grid grid-cols-8 grid-rows-8">
-        {[...Array(64)].map((_, i) => (
-          <div
-            key={i}
-            className={`${
-              (i + Math.floor(i / 8)) % 2 === 0 ? 'bg-black' : 'bg-white'
-            } opacity-10`}
-          ></div>
-        ))}
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Void portal hero section */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-blue-900 to-black animate-pulse"></div>
+        <div className="absolute inset-0 opacity-50">
+          {[...Array(100)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-white"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
+                animation: `twinkle ${Math.random() * 5 + 3}s infinite`,
+              }}
+            ></div>
+          ))}
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-6xl font-bold text-white mb-4">Welcome to My Realm</h1>
+          <p className="text-2xl text-blue-200">Discover the Magic Within</p>
+        </div>
       </div>
-      
-      {/* Foggy red and black overtone */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-red-900/30 to-black/30 mix-blend-overlay"></div>
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-16">
-        <h1 className="text-6xl font-bold text-white mb-8 text-center">Welcome to My World</h1>
+        <h2 className="text-4xl font-bold text-white mb-8 text-center">Explore My World</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <FeatureCard
