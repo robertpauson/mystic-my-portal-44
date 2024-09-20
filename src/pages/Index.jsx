@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Users, Briefcase, Eye } from 'lucide-react';
+import { Sparkles, Users, Briefcase, Eye, Repeat } from 'lucide-react';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* New hero section with elliptic gradient and necro border */}
+      {/* Hero section with elliptic gradient and necro border */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-purple-900 via-black to-gray-900"></div>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -40,32 +40,9 @@ const Index = () => {
         <div className="relative z-10 text-center p-8 bg-black/50 backdrop-blur-md rounded-xl shadow-2xl">
           <h1 className="text-6xl font-bold text-white mb-4 text-shadow">Enter the Void</h1>
           <p className="text-2xl text-purple-300">Where Magic and Mystery Collide</p>
-        </div>
-      </div>
-
-      <div className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-3/4 h-3/4 bg-gradient-to-r from-gray-900 via-white to-gray-900 rounded-full opacity-20 animate-pulse"></div>
-        </div>
-        <div className="absolute inset-0 opacity-50">
-          {[...Array(100)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-white"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 3 + 1}px`,
-                height: `${Math.random() * 3 + 1}px`,
-                animation: `twinkle ${Math.random() * 5 + 3}s infinite`,
-              }}
-            ></div>
-          ))}
-        </div>
-        <div className="relative z-10 text-center p-8 bg-black/50 backdrop-blur-md rounded-xl shadow-2xl">
-          <h1 className="text-6xl font-bold text-white mb-4 text-shadow">Welcome to My Realm</h1>
-          <p className="text-2xl text-gray-300">Discover the Magic Within</p>
+          <Link to="/character-select" className="mt-8 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Discover the Magic Within
+          </Link>
         </div>
       </div>
 
@@ -92,9 +69,9 @@ const Index = () => {
           />
           <FeatureCard
             icon={<Eye className="h-12 w-12 text-red-400" />}
-            title="Unique Perspective"
-            description="Seeing the world through a lens of curiosity and wonder."
-            link="/unique-perspective"
+            title="World Perception"
+            description="Understanding the subtle energies and chakras that shape our reality."
+            link="/world-perception"
           />
         </div>
         
@@ -102,9 +79,9 @@ const Index = () => {
           <p className="text-xl text-white mb-4 text-shadow">
             Dive into my world of endless possibilities and discover the magic within.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Explore More
-          </button>
+          <Link to="/character-select" className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Choose Your Path
+          </Link>
         </div>
       </div>
 
