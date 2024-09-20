@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Briefcase, Users, Eye, Repeat } from 'lucide-react';
+import { Briefcase, Home, Users, Eye } from 'lucide-react';
 
 const Career = () => {
   return (
@@ -11,7 +11,6 @@ const Career = () => {
           <NavItem to="/career" icon={<Briefcase className="h-6 w-6" />} text="Career" />
           <NavItem to="/social-connections" icon={<Users className="h-6 w-6" />} text="Social" />
           <NavItem to="/unique-perspective" icon={<Eye className="h-6 w-6" />} text="Perspective" />
-          <NavItem to="/incarnations" icon={<Repeat className="h-6 w-6" />} text="Incarnations" />
         </ul>
       </nav>
 
