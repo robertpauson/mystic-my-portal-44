@@ -9,7 +9,7 @@ const WorldPerception = () => {
     { name: 'Emotional Body', description: 'The seat of our feelings, emotions, and desires.' },
     { name: 'Mental Body', description: 'The realm of thoughts, beliefs, and intellectual processes.' },
     { name: 'Astral Body', description: 'The bridge between the physical and higher spiritual realms.' },
-    { name: 'Causal Body', description: 'The repository of our karmic patterns and soul's wisdom.' },
+    { name: 'Causal Body', description: 'The repository of our karmic patterns and soul\'s wisdom.' },
     { name: 'Spiritual Body', description: 'Our highest connection to universal consciousness and divinity.' },
   ];
 
