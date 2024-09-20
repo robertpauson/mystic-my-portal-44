@@ -51,6 +51,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Necromancy theme colors
+        'dark-purple': '#4A0E4E',
+        'sickly-green': '#7FFF00',
+        'crimson': '#DC143C',
+        'bone-white': '#F9F6EE',
       },
       borderRadius: {
         lg: "var(--radius)",
