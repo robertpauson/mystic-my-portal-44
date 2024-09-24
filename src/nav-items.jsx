@@ -1,8 +1,9 @@
-import { HomeIcon, BriefcaseIcon, UsersIcon, EyeIcon } from "lucide-react";
+import { HomeIcon, BriefcaseIcon, UsersIcon, EyeIcon, RepeatIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Career from "./pages/Career.jsx";
 import SocialConnections from "./pages/SocialConnections.jsx";
 import UniquePerspective from "./pages/UniquePerspective.jsx";
+import Incarnations from "./pages/Incarnations.jsx";
 
 /**
  * Central place for defining the navigation items. Used for navigation components and routing.
@@ -31,5 +32,11 @@ export const navItems = [
     to: "/unique-perspective",
     icon: <EyeIcon className="h-4 w-4" />,
     page: <UniquePerspective />,
+  },
+  {
+    title: "Incarnations",
+    to: "/incarnations",
+    icon: <RepeatIcon className="h-4 w-4" />,
+    page: <Incarnations />,
   },
 ];

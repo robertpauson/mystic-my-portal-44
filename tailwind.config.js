@@ -76,9 +76,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      textShadow: {
-        'necro': '0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00',
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
